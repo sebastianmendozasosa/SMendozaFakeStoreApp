@@ -21,16 +21,7 @@ import com.example.fakestoreapp.ui.theme.FakeStoreAppTheme
 import com.example.fakestoreapp.ui.theme.HomeScreenRoute
 import com.example.fakestoreapp.ui.theme.ProductDetailScreenRoute
 
-/**
- * 1. Crear modelos
- * 2. Crear servicios fetch, httpclient -> Retrofit
- * 3. Consumir servicios
- * 4. Refrescar UI
- *
- *
- *
- *
- */
+
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -52,7 +43,7 @@ class MainActivity : ComponentActivity() {
 
                         composable<ProductDetailScreenRoute> { backStack ->
                             val args = backStack.toRoute<ProductDetailScreenRoute>()
-                            ProductDetailScreen(args.id)
+                            ProductDetailScreen(args.id, navController)
                         }
                     }
                 }
